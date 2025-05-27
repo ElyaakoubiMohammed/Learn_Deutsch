@@ -36,9 +36,11 @@ Search **any verb** and get full conjugation across tenses:
 
 ## 🛠️ Tech Stack
 
-- **Flutter** & Dart
-- **State management:** Provider / Riverpod / Bloc (as per preference)
-- **Animations:** Lottie & Flutter animations
+- **React Native** & Expo
+- TypeScript
+- **State management:** Context API
+- **Navigation:** React Navigation
+- **Animations:** Lottie
 - **Localization:** i18n support for future languages
 - **Mobile-first design** (Android & iOS)
 
