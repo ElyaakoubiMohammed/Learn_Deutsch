@@ -398,63 +398,7 @@ export const verbsData = [
       }
     }
   },
-  {
-    infinitive: 'sehen',
-    translation: 'to see',
-    example: 'Ich sehe dich morgen.',
-    exampleTranslation: 'I\'ll see you tomorrow.',
-    notes: 'A stem-changing verb (e → ie) in the second and third person singular of the present tense.',
-    conjugations: {
-      'Präsens': {
-        'ich': 'sehe',
-        'du': 'siehst',
-        'er/sie/es': 'sieht',
-        'wir': 'sehen',
-        'ihr': 'seht',
-        'sie/Sie': 'sehen'
-      },
-      'Präteritum': {
-        'ich': 'sah',
-        'du': 'sahst',
-        'er/sie/es': 'sah',
-        'wir': 'sahen',
-        'ihr': 'saht',
-        'sie/Sie': 'sahen'
-      },
-      'Perfekt': {
-        'ich': 'habe gesehen',
-        'du': 'hast gesehen',
-        'er/sie/es': 'hat gesehen',
-        'wir': 'haben gesehen',
-        'ihr': 'habt gesehen',
-        'sie/Sie': 'haben gesehen'
-      },
-      'Plusquamperfekt': {
-        'ich': 'hatte gesehen',
-        'du': 'hattest gesehen',
-        'er/sie/es': 'hatte gesehen',
-        'wir': 'hatten gesehen',
-        'ihr': 'hattet gesehen',
-        'sie/Sie': 'hatten gesehen'
-      },
-      'Futur I': {
-        'ich': 'werde sehen',
-        'du': 'wirst sehen',
-        'er/sie/es': 'wird sehen',
-        'wir': 'werden sehen',
-        'ihr': 'werdet sehen',
-        'sie/Sie': 'werden sehen'
-      },
-      'Futur II': {
-        'ich': 'werde gesehen haben',
-        'du': 'wirst gesehen haben',
-        'er/sie/es': 'wird gesehen haben',
-        'wir': 'werden gesehen haben',
-        'ihr': 'werdet gesehen haben',
-        'sie/Sie': 'werden gesehen haben'
-      }
-    }
-  },
+
   {
     infinitive: 'machen',
     translation: 'to make, to do',
@@ -623,6 +567,291 @@ export const verbsData = [
         'wir': 'werden gemusst haben',
         'ihr': 'werdet gemusst haben',
         'sie/Sie': 'werden gemusst haben'
+      }
+    }
+  },
+  {
+    infinitive: 'geben',
+    translation: 'to give',
+    example: 'Er gibt mir ein Buch.',
+    exampleTranslation: 'He gives me a book.',
+    notes: 'Irregular verb with stem change in past tense (geben → gab → gegeben).',
+    conjugations: {
+      'Präsens': {
+        'ich': 'gebe',
+        'du': 'gibst',
+        'er/sie/es': 'gibt',
+        'wir': 'geben',
+        'ihr': 'gebt',
+        'sie/Sie': 'geben'
+      },
+      'Präteritum': {
+        'ich': 'gab',
+        'du': 'gabst',
+        'er/sie/es': 'gab',
+        'wir': 'gaben',
+        'ihr': 'gabt',
+        'sie/Sie': 'gaben'
+      },
+      'Perfekt': {
+        'ich': 'habe gegeben',
+        'du': 'hast gegeben',
+        'er/sie/es': 'hat gegeben',
+        'wir': 'haben gegeben',
+        'ihr': 'habt gegeben',
+        'sie/Sie': 'haben gegeben'
+      },
+      'Plusquamperfekt': {
+        'ich': 'hatte gegeben',
+        'du': 'hattest gegeben',
+        'er/sie/es': 'hatte gegeben',
+        'wir': 'hatten gegeben',
+        'ihr': 'hattet gegeben',
+        'sie/Sie': 'hatten gegeben'
+      },
+      'Futur I': {
+        'ich': 'werde geben',
+        'du': 'wirst geben',
+        'er/sie/es': 'wird geben',
+        'wir': 'werden geben',
+        'ihr': 'werdet geben',
+        'sie/Sie': 'werden geben'
+      },
+      'Futur II': {
+        'ich': 'werde gegeben haben',
+        'du': 'wirst gegeben haben',
+        'er/sie/es': 'wird gegeben haben',
+        'wir': 'werden gegeben haben',
+        'ihr': 'werdet gegeben haben',
+        'sie/Sie': 'werden gegeben haben'
+      }
+    }
+  },
+  {
+    infinitive: 'sehen',
+    translation: 'to see',
+    example: 'Ich sehe den Film.',
+    exampleTranslation: 'I see the movie.',
+    notes: 'Stem-changing verb (e → ie) in present tense.',
+    conjugations: {
+      'Präsens': {
+        'ich': 'sehe',
+        'du': 'siehst',
+        'er/sie/es': 'sieht',
+        'wir': 'sehen',
+        'ihr': 'seht',
+        'sie/Sie': 'sehen'
+      },
+      'Präteritum': {
+        'ich': 'sah',
+        'du': 'sahst',
+        'er/sie/es': 'sah',
+        'wir': 'sahen',
+        'ihr': 'saht',
+        'sie/Sie': 'sahen'
+      },
+      'Perfekt': {
+        'ich': 'habe gesehen',
+        'du': 'hast gesehen',
+        'er/sie/es': 'hat gesehen',
+        'wir': 'haben gesehen',
+        'ihr': 'habt gesehen',
+        'sie/Sie': 'haben gesehen'
+      },
+      'Plusquamperfekt': {
+        'ich': 'hatte gesehen',
+        'du': 'hattest gesehen',
+        'er/sie/es': 'hatte gesehen',
+        'wir': 'hatten gesehen',
+        'ihr': 'hattet gesehen',
+        'sie/Sie': 'hatten gesehen'
+      },
+      'Futur I': {
+        'ich': 'werde sehen',
+        'du': 'wirst sehen',
+        'er/sie/es': 'wird sehen',
+        'wir': 'werden sehen',
+        'ihr': 'werdet sehen',
+        'sie/Sie': 'werden sehen'
+      },
+      'Futur II': {
+        'ich': 'werde gesehen haben',
+        'du': 'wirst gesehen haben',
+        'er/sie/es': 'wird gesehen haben',
+        'wir': 'werden gesehen haben',
+        'ihr': 'werdet gesehen haben',
+        'sie/Sie': 'werden gesehen haben'
+      }
+    }
+  },
+  {
+    infinitive: 'nehmen',
+    translation: 'to take',
+    example: 'Sie nimmt ihre Tasche.',
+    exampleTranslation: 'She takes her bag.',
+    notes: 'Irregular verb; stem changes in past tense (nehmen → nahm → genommen).',
+    conjugations: {
+      'Präsens': {
+        'ich': 'nehme',
+        'du': 'nimmst',
+        'er/sie/es': 'nimmt',
+        'wir': 'nehmen',
+        'ihr': 'nehmt',
+        'sie/Sie': 'nehmen'
+      },
+      'Präteritum': {
+        'ich': 'nahm',
+        'du': 'nahmst',
+        'er/sie/es': 'nahm',
+        'wir': 'nahmen',
+        'ihr': 'nahmt',
+        'sie/Sie': 'nahmen'
+      },
+      'Perfekt': {
+        'ich': 'habe genommen',
+        'du': 'hast genommen',
+        'er/sie/es': 'hat genommen',
+        'wir': 'haben genommen',
+        'ihr': 'habt genommen',
+        'sie/Sie': 'haben genommen'
+      },
+      'Plusquamperfekt': {
+        'ich': 'hatte genommen',
+        'du': 'hattest genommen',
+        'er/sie/es': 'hatte genommen',
+        'wir': 'hatten genommen',
+        'ihr': 'hattet genommen',
+        'sie/Sie': 'hatten genommen'
+      },
+      'Futur I': {
+        'ich': 'werde nehmen',
+        'du': 'wirst nehmen',
+        'er/sie/es': 'wird nehmen',
+        'wir': 'werden nehmen',
+        'ihr': 'werdet nehmen',
+        'sie/Sie': 'werden nehmen'
+      },
+      'Futur II': {
+        'ich': 'werde genommen haben',
+        'du': 'wirst genommen haben',
+        'er/sie/es': 'wird genommen haben',
+        'wir': 'werden genommen haben',
+        'ihr': 'werdet genommen haben',
+        'sie/Sie': 'werden genommen haben'
+      }
+    }
+  },
+  {
+    infinitive: 'fahren',
+    translation: 'to drive, to go (by vehicle)',
+    example: 'Wir fahren nach Berlin.',
+    exampleTranslation: 'We are driving to Berlin.',
+    notes: 'Irregular verb; stem changes from "fahren" → "fuhr" → "gefahren". Uses "sein" in perfect tense.',
+    conjugations: {
+      'Präsens': {
+        'ich': 'fahre',
+        'du': 'fährst',
+        'er/sie/es': 'fährt',
+        'wir': 'fahren',
+        'ihr': 'fahrt',
+        'sie/Sie': 'fahren'
+      },
+      'Präteritum': {
+        'ich': 'fuhr',
+        'du': 'fuhrst',
+        'er/sie/es': 'fuhr',
+        'wir': 'fuhren',
+        'ihr': 'fuhrt',
+        'sie/Sie': 'fuhren'
+      },
+      'Perfekt': {
+        'ich': 'bin gefahren',
+        'du': 'bist gefahren',
+        'er/sie/es': 'ist gefahren',
+        'wir': 'sind gefahren',
+        'ihr': 'seid gefahren',
+        'sie/Sie': 'sind gefahren'
+      },
+      'Plusquamperfekt': {
+        'ich': 'war gefahren',
+        'du': 'warst gefahren',
+        'er/sie/es': 'war gefahren',
+        'wir': 'waren gefahren',
+        'ihr': 'wart gefahren',
+        'sie/Sie': 'waren gefahren'
+      },
+      'Futur I': {
+        'ich': 'werde fahren',
+        'du': 'wirst fahren',
+        'er/sie/es': 'wird fahren',
+        'wir': 'werden fahren',
+        'ihr': 'werdet fahren',
+        'sie/Sie': 'werden fahren'
+      },
+      'Futur II': {
+        'ich': 'werde gefahren sein',
+        'du': 'wirst gefahren sein',
+        'er/sie/es': 'wird gefahren sein',
+        'wir': 'werden gefahren sein',
+        'ihr': 'werdet gefahren sein',
+        'sie/Sie': 'werden gefahren sein'
+      }
+    }
+  },
+  {
+    infinitive: 'lesen',
+    translation: 'to read',
+    example: 'Ich lese ein Buch.',
+    exampleTranslation: 'I am reading a book.',
+    notes: 'Irregular verb with stem change (e → e/ä) in past tense.',
+    conjugations: {
+      'Präsens': {
+        'ich': 'lese',
+        'du': 'liest',
+        'er/sie/es': 'liest',
+        'wir': 'lesen',
+        'ihr': 'lest',
+        'sie/Sie': 'lesen'
+      },
+      'Präteritum': {
+        'ich': 'las',
+        'du': 'lastest',
+        'er/sie/es': 'las',
+        'wir': 'lasen',
+        'ihr': 'last',
+        'sie/Sie': 'lasen'
+      },
+      'Perfekt': {
+        'ich': 'habe gelesen',
+        'du': 'hast gelesen',
+        'er/sie/es': 'hat gelesen',
+        'wir': 'haben gelesen',
+        'ihr': 'habt gelesen',
+        'sie/Sie': 'haben gelesen'
+      },
+      'Plusquamperfekt': {
+        'ich': 'hatte gelesen',
+        'du': 'hattest gelesen',
+        'er/sie/es': 'hatte gelesen',
+        'wir': 'hatten gelesen',
+        'ihr': 'hattet gelesen',
+        'sie/Sie': 'hatten gelesen'
+      },
+      'Futur I': {
+        'ich': 'werde lesen',
+        'du': 'wirst lesen',
+        'er/sie/es': 'wird lesen',
+        'wir': 'werden lesen',
+        'ihr': 'werdet lesen',
+        'sie/Sie': 'werden lesen'
+      },
+      'Futur II': {
+        'ich': 'werde gelesen haben',
+        'du': 'wirst gelesen haben',
+        'er/sie/es': 'wird gelesen haben',
+        'wir': 'werden gelesen haben',
+        'ihr': 'werdet gelesen haben',
+        'sie/Sie': 'werden gelesen haben'
       }
     }
   }

@@ -50,7 +50,7 @@ export const exerciseData = [
     estimatedTime: 6,
     completed: false
   },
-  
+
   // A2 Level Exercises
   {
     id: 6,
@@ -102,7 +102,7 @@ export const exerciseData = [
     estimatedTime: 15,
     completed: false
   },
-  
+
   // B1 Level Exercises
   {
     id: 11,
@@ -154,7 +154,7 @@ export const exerciseData = [
     estimatedTime: 12,
     completed: false
   },
-  
+
   // B2 Level Exercises
   {
     id: 16,
@@ -206,7 +206,7 @@ export const exerciseData = [
     estimatedTime: 20,
     completed: false
   },
-  
+
   // C1 Level Exercises
   {
     id: 21,
@@ -238,7 +238,7 @@ export const exerciseData = [
     estimatedTime: 30,
     completed: false
   },
-  
+
   // C2 Level Exercises
   {
     id: 24,

@@ -1,10 +1,10 @@
 import { useState, useRef, useEffect } from 'react';
-import { 
-  View, 
-  Text, 
-  StyleSheet, 
-  TextInput, 
-  TouchableOpacity, 
+import {
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity,
   ScrollView,
   FlatList,
   Animated
@@ -12,15 +12,28 @@ import {
 import { Search, X, ChevronDown, Volume2 } from 'lucide-react-native';
 import { verbsData } from '@/data/verbsData';
 
+type Verb = {
+  infinitive: string;
+  translation: string;
+  example?: string;
+  exampleTranslation?: string;
+  notes?: string;
+  conjugations: {
+    [tense: string]: {
+      [pronoun: string]: string;
+    };
+  };
+};
+
 export default function VerbsScreen() {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedVerb, setSelectedVerb] = useState(null);
+  const [selectedVerb, setSelectedVerb] = useState<Verb | null>(null);
   const [selectedTense, setSelectedTense] = useState('Präsens');
-  const [searchResults, setSearchResults] = useState([]);
+  const [searchResults, setSearchResults] = useState<Verb[]>([]);
   const [showTenseDropdown, setShowTenseDropdown] = useState(false);
-  
+
   const dropdownAnimation = useRef(new Animated.Value(0)).current;
-  const searchInputRef = useRef(null);
+  const searchInputRef = useRef<TextInput>(null);
 
   const tenses = [
     'Präsens',
@@ -40,7 +53,7 @@ export default function VerbsScreen() {
 
   useEffect(() => {
     if (searchQuery.length > 0) {
-      const filteredVerbs = verbsData.filter(verb => 
+      const filteredVerbs = verbsData.filter(verb =>
         verb.infinitive.toLowerCase().includes(searchQuery.toLowerCase()) ||
         verb.translation.toLowerCase().includes(searchQuery.toLowerCase())
       );
@@ -69,26 +82,26 @@ export default function VerbsScreen() {
     searchInputRef.current?.focus();
   };
 
-  const handleVerbSelect = (verb) => {
+  const handleVerbSelect = (verb: Verb) => {
     setSelectedVerb(verb);
     setSearchQuery('');
     setSearchResults([]);
   };
 
-  const handleTenseSelect = (tense) => {
+  const handleTenseSelect = (tense: string) => {
     setSelectedTense(tense);
     setShowTenseDropdown(false);
   };
 
   const renderConjugationTable = () => {
     if (!selectedVerb) return null;
-    
+
     const conjugationData = selectedVerb.conjugations[selectedTense];
-    
+
     return (
       <View style={styles.conjugationTableContainer}>
         {Object.entries(conjugationData).map(([pronoun, form], index) => (
-          <View 
+          <View
             key={pronoun}
             style={[
               styles.conjugationRow,
@@ -103,8 +116,8 @@ export default function VerbsScreen() {
     );
   };
 
-  const renderVerbItem = ({ item }) => (
-    <TouchableOpacity 
+  const renderVerbItem = ({ item }: { item: Verb }) => (
+    <TouchableOpacity
       style={styles.searchResultItem}
       onPress={() => handleVerbSelect(item)}
     >
@@ -132,7 +145,7 @@ export default function VerbsScreen() {
             </TouchableOpacity>
           )}
         </View>
-        
+
         {searchResults.length > 0 && (
           <FlatList
             data={searchResults}
@@ -163,14 +176,14 @@ export default function VerbsScreen() {
           </View>
 
           <View style={styles.tenseSelector}>
-            <TouchableOpacity 
+            <TouchableOpacity
               style={styles.tenseSelectorButton}
               onPress={() => setShowTenseDropdown(!showTenseDropdown)}
             >
               <Text style={styles.tenseSelectorButtonText}>{selectedTense}</Text>
               <ChevronDown color="#333333" size={20} />
             </TouchableOpacity>
-            
+
             <Animated.View style={[styles.tenseDropdown, { height: dropdownHeight }]}>
               {tenses.map((tense) => (
                 <TouchableOpacity
@@ -181,7 +194,7 @@ export default function VerbsScreen() {
                   ]}
                   onPress={() => handleTenseSelect(tense)}
                 >
-                  <Text 
+                  <Text
                     style={[
                       styles.tenseOptionText,
                       selectedTense === tense && styles.selectedTenseOptionText

@@ -8,7 +8,7 @@ import { Trophy, Sparkles, Star } from 'lucide-react-native';
 export default function HomeScreen() {
   const [dailyStreak, setDailyStreak] = useState(7);
   const [progress, setProgress] = useState(68);
-  const [currentLevel, setCurrentLevel] = useState('A2');
+  const [currentLevel, setCurrentLevel] = useState<'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'>('A2');
   const [animations] = useState({
     welcome: new Animated.Value(0),
     stats: new Animated.Value(0),
@@ -46,8 +46,8 @@ export default function HomeScreen() {
     }, [])
   );
 
-  const getLevelColor = (level) => {
-    const colors = {
+  const getLevelColor = (level: 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2') => {
+    const colors: Record<'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2', string> = {
       'A1': '#4CAF50', // Green
       'A2': '#8BC34A', // Light Green
       'B1': '#FFD600', // Yellow
@@ -60,12 +60,12 @@ export default function HomeScreen() {
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-      <Animated.View 
+      <Animated.View
         style={[
           styles.welcomeContainer,
-          { 
+          {
             opacity: animations.welcome,
-            transform: [{ 
+            transform: [{
               translateY: animations.welcome.interpolate({
                 inputRange: [0, 1],
                 outputRange: [50, 0]
@@ -85,12 +85,12 @@ export default function HomeScreen() {
         </View>
       </Animated.View>
 
-      <Animated.View 
+      <Animated.View
         style={[
           styles.statsContainer,
-          { 
+          {
             opacity: animations.stats,
-            transform: [{ 
+            transform: [{
               translateY: animations.stats.interpolate({
                 inputRange: [0, 1],
                 outputRange: [30, 0]
@@ -124,12 +124,12 @@ export default function HomeScreen() {
         </View>
       </Animated.View>
 
-      <Animated.View 
+      <Animated.View
         style={[
           styles.dailyExerciseContainer,
-          { 
+          {
             opacity: animations.dailyExercise,
-            transform: [{ 
+            transform: [{
               translateY: animations.dailyExercise.interpolate({
                 inputRange: [0, 1],
                 outputRange: [30, 0]
@@ -158,7 +158,7 @@ export default function HomeScreen() {
         <Text style={styles.sectionTitle}>Recommended for You</Text>
         <View style={styles.recommendedList}>
           <TouchableOpacity style={styles.recommendedCard}>
-            <Image 
+            <Image
               source={{ uri: 'https://images.pexels.com/photos/3769138/pexels-photo-3769138.jpeg' }}
               style={styles.recommendedImage}
             />
@@ -169,7 +169,7 @@ export default function HomeScreen() {
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.recommendedCard}>
-            <Image 
+            <Image
               source={{ uri: 'https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg' }}
               style={styles.recommendedImage}
             />
