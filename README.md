@@ -49,7 +49,7 @@ Search **any verb** and get full conjugation across tenses:
 ## 🚀 Getting Started
 
 ```bash
-git clone https://github.com/yourusername/Learn_Deutsch.git
+git clone [https://](https://github.com/ElyaakoubiMohammed/Learn_Deutsch)
 cd Learn_Deutsch
 flutter pub get
 flutter run
